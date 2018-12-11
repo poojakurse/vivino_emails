@@ -1,0 +1,254 @@
+{% set wod = (('$(main_wine_url)' | string).split("price_id=")[1] | string).split("&")[0] %}
+{% if not lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id].deals_vc_product_id %}
+{% elif not lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id2].deals_vc_product_id %}
+{% elif not lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id3].deals_vc_product_id %}
+<!--display nothing if there is no product--> 
+{% elif lookups.recommended_vintage[contact.email_address].product_id2 == wod %}
+	
+	<table style="max-width:700px; margin:0px auto;" class="w85pct" width="700" border="0" cellspacing="0" cellpadding="0">
+		
+	<tr>
+		<td align="center" class="center" style="font-family: Helvetica, Arial, sans-serif; font-size:19px; color:#000000; line-height:25px; -webkit-text-size-adjust:none; padding:30px 0px 15px 0px; text-transform:uppercase; letter-spacing:2px;">
+		<strong>Altre due grandi offerte per te su Vivino oggi</strong>
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="center" style="padding:25px 0px 0px;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+		  <tr>
+		    <td valign="top"><table class="w100pct" width="340" border="0" align="left" cellpadding="0" cellspacing="0">
+		      <tr>
+		        <td width="35" align="center" style="padding:0px 0px 0px 0px"><a href="{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id].deals_near_perfect_link }}&prefill_token={{ contact.prefill_token }}&change_ship_to_country_code={{ contact.country_code }}" target="_blank"><img src="{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id].deals_vc_bottle_image }}" alt="{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id].deals_vc_winery_name }}" height="200" style="display:block; border:none; margin:0px auto;" /></a>
+		        </td>
+		        </tr>
+	        <tr>
+	          <td align="center" style="font-family:  Helvetica, Arial, sans-serif; font-size:16px; color:#666666; text-decoration:none; padding:15px 20px 10px 20px; -webkit-text-size-adjust:none;"><strong><a style="color:#666666; text-decoration:none;" href="{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id].deals_near_perfect_link }}&prefill_token={{ contact.prefill_token }}&change_ship_to_country_code={{ contact.country_code }}" target="_blank">{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id].deals_vc_winery_name }}</a></strong><br />
+	            <span style="font-size: 22px; line-height:30px; color:#000000;"><a style="color:#000000; text-decoration:none;" href="{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id].deals_near_perfect_link }}&prefill_token={{ contact.prefill_token }}&change_ship_to_country_code={{ contact.country_code }}" target="_blank">{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id].deals_vc_wine_name }}</a></span></td>
+	
+	        </tr>
+	      <tr>
+	        <td align="center"><table border="0" cellspacing="0" cellpadding="0">
+	          <tr>
+	            <td><img src="https://vivino.s3.amazonaws.com/emails/simon/stars/star_{% if lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id].deals_vc_ratings_average %}{{ (lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id].deals_vc_ratings_average)|round(1) }}{% endif %}.png" alt="" width="100" height="21" style="display:block; border:none;" /></td>
+	          </tr>
+	        </table></td>
+	
+	      </tr> 						
+	      <tr>
+	        <td align="center" class="center" style="font-family: Helvetica, Arial, sans-serif; font-size:14px; color:#000000; line-height:21px; -webkit-text-size-adjust:none; padding:10px 0px 10px 0px;"><b>Vivino {% if lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id].deals_vc_ratings_average %}{{ (lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id].deals_vc_ratings_average)| round(1) | replace('.',',') }}{% endif %}</b><span style="color:#999897;">, {{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id].deals_vc_ratings_count }} recensioni</span></td>
+	      </tr>
+	      
+		  <tr>
+	        <td align="center" style="font-family:  Helvetica, Arial, sans-serif; font-size: 15px; line-height:24px; color:#ffffff; padding:20px 0px 45px 0px; -webkit-text-size-adjust:none;">
+		        <table bgcolor="#4db057" border="0" cellpadding="0" cellspacing="0" class="automargin cta" style="border-collapse: separate !important; border-radius:7px; background:#4db057;">
+		          <tr>
+		            <td align="center" valign="middle" style="font-family:  Helvetica, Arial, sans-serif; font-size: 18px; color:#ffffff; padding: 10px 50px; vertical-align:middle">
+			        <a href="{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id].deals_near_perfect_link }}&prefill_token={{ contact.prefill_token }}&change_ship_to_country_code={{ contact.country_code }}" target="_blank" style="font-family: Helvetica, Arial, sans-serif; font-weight: bold;letter-spacing: normal;line-height: 100%;text-align: center; display:block;text-decoration: none;color: #ffffff;letter-spacing:1px"><strong>Mostra offerta</strong></a>
+			        </td>
+		          </tr>
+	        	</table>
+	        </td>
+	      </tr>
+	      
+	    </table>
+	    <!--[if (gte mso 9)|(IE)]> </td>
+		<td valign='top'> <![endif]-->
+	      <table class="w100pct" width="340" border="0" align="right" cellpadding="0" cellspacing="0">
+	        <tr>
+	          <td width="35" align="center" style="padding:0px 0px 0px 0px"><a href="{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id3].deals_near_perfect_link }}&prefill_token={{ contact.prefill_token }}&change_ship_to_country_code={{ contact.country_code }}" target="_blank"><img src="{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id3].deals_vc_bottle_image }}" alt="{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id3].deals_vc_winery_name }}" height="200"  style="display:block; border:none; margin:0px auto;" /></a></td>
+	        </tr>
+	        <tr>
+	          <td align="center" style="font-family:  Helvetica, Arial, sans-serif; font-size:16px; color:#666666; text-decoration:none; padding:15px 20px 10px 20px; -webkit-text-size-adjust:none;"><strong><a style="text-decoration: none; color:#666666" href="{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id3].deals_near_perfect_link }}&prefill_token={{ contact.prefill_token }}&change_ship_to_country_code={{ contact.country_code }}" target="_blank">{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id3].deals_vc_winery_name }}</a></strong><br />
+	            <span style="font-size: 22px; line-height:30px; color:#000000;"><a style="text-decoration: none; color:#000000" href="{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id3].deals_near_perfect_link }}&prefill_token={{ contact.prefill_token }}&change_ship_to_country_code={{ contact.country_code }}" target="_blank">{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id3].deals_vc_wine_name }}</a></span></td>
+	        </tr>
+	        <tr>
+	          <td align="center"><table border="0" cellspacing="0" cellpadding="0">
+	          <tr>
+	            <td><img src="https://vivino.s3.amazonaws.com/emails/simon/stars/star_{% if lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id3].deals_vc_ratings_average %}
+	{{ (lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id3].deals_vc_ratings_average)|round(1) }}{% endif %}.png" alt="" width="100" height="21" style="display:block; border:none;" /></td>
+	          </tr>
+	        </table></td>
+	        </tr> 						
+	        <tr>
+	              <td align="center" class="center" style="font-family: Helvetica, Arial, sans-serif; font-size:14px; color:#000000; line-height:21px; -webkit-text-size-adjust:none; padding:10px 0px 10px 0px;"><b>Vivino {% if lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id3].deals_vc_ratings_average %}{{ (lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id3].deals_vc_ratings_average)| round(1) | replace('.',',') }}{% endif %}</b><span style="color:#999897;">, {{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id3].deals_vc_ratings_count }} recensioni</span></td>
+	            </tr>
+	            <tr>
+	          <td align="center" style="font-family:  Helvetica, Arial, sans-serif; font-size: 15px; line-height:24px; color:#ffffff; padding:20px 0px 45px 0px; -webkit-text-size-adjust:none;"><table bgcolor="#4db057" border="0" cellpadding="0" cellspacing="0" class="automargin cta" style="border-collapse: separate !important; border-radius:7px; background:#4db057;">
+	            <tr>
+	              <td align="center" valign="middle" style="font-family:  Helvetica, Arial, sans-serif; font-size: 18px; color:#ffffff; padding: 10px 50px; vertical-align:middle"><a href="{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id3].deals_near_perfect_link }}&prefill_token={{ contact.prefill_token }}&change_ship_to_country_code={{ contact.country_code }}" target="_blank" style="font-family: Helvetica, Arial, sans-serif; font-weight: bold;letter-spacing: normal;line-height: 100%;text-align: center; display:block;text-decoration: none;color: #ffffff;letter-spacing:1px"><strong>Mostra offerta</strong></a></td>
+	            </tr>
+	          </table></td>
+	        </tr>
+	      </table></td>
+	
+	  </tr>
+	</table></td>
+	</tr>
+	</table>
+	     
+{% elif lookups.recommended_vintage[contact.email_address].product_id3 == wod %}
+
+	<table style="max-width:700px; margin:0px auto;" class="w85pct" width="700" border="0" cellspacing="0" cellpadding="0">
+		
+	<tr>
+		<td align="center" class="center" style="font-family: Helvetica, Arial, sans-serif; font-size:19px; color:#000000; line-height:25px; -webkit-text-size-adjust:none; padding:30px 0px 15px 0px; text-transform:uppercase; letter-spacing:2px;">
+		<strong>Altre due grandi offerte per te su Vivino oggi </strong>
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="center" style="padding:25px 0px 0px;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+		  <tr>
+		    <td valign="top"><table class="w100pct" width="340" border="0" align="left" cellpadding="0" cellspacing="0">
+		      <tr>
+		        <td width="35" align="center" style="padding:0px 0px 0px 0px"><a href="{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id].deals_near_perfect_link }}&prefill_token={{ contact.prefill_token }}&change_ship_to_country_code={{ contact.country_code }}" target="_blank"><img src="{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id].deals_vc_bottle_image }}" alt="{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id].deals_vc_winery_name }}" height="200" style="display:block; border:none; margin:0px auto;" /></a>
+		        </td>
+		        </tr>
+	        <tr>
+	          <td align="center" style="font-family:  Helvetica, Arial, sans-serif; font-size:16px; color:#666666; text-decoration:none; padding:15px 20px 10px 20px; -webkit-text-size-adjust:none;"><strong><a style="color:#666666; text-decoration:none;" href="{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id].deals_near_perfect_link }}&prefill_token={{ contact.prefill_token }}&change_ship_to_country_code={{ contact.country_code }}" target="_blank">{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id].deals_vc_winery_name }}</a></strong><br />
+	            <span style="font-size: 22px; line-height:30px; color:#000000;"><a style="color:#000000; text-decoration:none;" href="{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id].deals_near_perfect_link }}&prefill_token={{ contact.prefill_token }}&change_ship_to_country_code={{ contact.country_code }}" target="_blank">{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id].deals_vc_wine_name }}</a></span></td>
+	
+	        </tr>
+	      <tr>
+	        <td align="center"><table border="0" cellspacing="0" cellpadding="0">
+	          <tr>
+	            <td><img src="https://vivino.s3.amazonaws.com/emails/simon/stars/star_{% if lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id].deals_vc_ratings_average %}{{ (lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id].deals_vc_ratings_average)|round(1) }}{% endif %}.png" alt="" width="100" height="21" style="display:block; border:none;" /></td>
+	          </tr>
+	        </table></td>
+	
+	      </tr> 						
+	      <tr>
+	        <td align="center" class="center" style="font-family: Helvetica, Arial, sans-serif; font-size:14px; color:#000000; line-height:21px; -webkit-text-size-adjust:none; padding:10px 0px 10px 0px;"><b>Vivino {% if lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id].deals_vc_ratings_average %}{{ (lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id].deals_vc_ratings_average)| round(1) | replace('.',',') }}{% endif %}</b><span style="color:#999897;">, {{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id].deals_vc_ratings_count }} recensioni</span></td>
+	      </tr>
+	      
+		  <tr>
+	        <td align="center" style="font-family:  Helvetica, Arial, sans-serif; font-size: 15px; line-height:24px; color:#ffffff; padding:20px 0px 45px 0px; -webkit-text-size-adjust:none;">
+		        <table bgcolor="#4db057" border="0" cellpadding="0" cellspacing="0" class="automargin cta" style="border-collapse: separate !important; border-radius:7px; background:#4db057;">
+		          <tr>
+		            <td align="center" valign="middle" style="font-family:  Helvetica, Arial, sans-serif; font-size: 18px; color:#ffffff; padding: 10px 50px; vertical-align:middle">
+			        <a href="{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id].deals_near_perfect_link }}&prefill_token={{ contact.prefill_token }}&change_ship_to_country_code={{ contact.country_code }}" target="_blank" style="font-family: Helvetica, Arial, sans-serif; font-weight: bold;letter-spacing: normal;line-height: 100%;text-align: center; display:block;text-decoration: none;color: #ffffff;letter-spacing:1px"><strong>Mostra offerta</strong></a>
+			        </td>
+		          </tr>
+	        	</table>
+	        </td>
+	      </tr>
+	      
+	    </table>
+	    <!--[if (gte mso 9)|(IE)]> </td>
+		<td valign='top'> <![endif]-->
+	      <table class="w100pct" width="340" border="0" align="right" cellpadding="0" cellspacing="0">
+	        <tr>
+	          <td width="35" align="center" style="padding:0px 0px 0px 0px"><a href="{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id2].deals_near_perfect_link }}&prefill_token={{ contact.prefill_token }}&change_ship_to_country_code={{ contact.country_code }}" target="_blank"><img src="{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id2].deals_vc_bottle_image }}" alt="{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id2].deals_vc_winery_name }}" height="200"  style="display:block; border:none; margin:0px auto;" /></a></td>
+	        </tr>
+	        <tr>
+	          <td align="center" style="font-family:  Helvetica, Arial, sans-serif; font-size:16px; color:#666666; text-decoration:none; padding:15px 20px 10px 20px; -webkit-text-size-adjust:none;"><strong><a style="text-decoration: none; color:#666666" href="{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id2].deals_near_perfect_link }}&prefill_token={{ contact.prefill_token }}&change_ship_to_country_code={{ contact.country_code }}" target="_blank">{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id2].deals_vc_winery_name }}</a></strong><br />
+	            <span style="font-size: 22px; line-height:30px; color:#000000;"><a style="text-decoration: none; color:#000000" href="{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id2].deals_near_perfect_link }}&prefill_token={{ contact.prefill_token }}&change_ship_to_country_code={{ contact.country_code }}" target="_blank">{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id2].deals_vc_wine_name }}</a></span></td>
+	        </tr>
+	        <tr>
+	          <td align="center"><table border="0" cellspacing="0" cellpadding="0">
+	          <tr>
+	            <td><img src="https://vivino.s3.amazonaws.com/emails/simon/stars/star_{% if lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id2].deals_vc_ratings_average %}
+	{{ (lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id2].deals_vc_ratings_average)|round(1) }}{% endif %}.png" alt="" width="100" height="21" style="display:block; border:none;" /></td>
+	          </tr>
+	        </table></td>
+	        </tr> 						
+	        <tr>
+	              <td align="center" class="center" style="font-family: Helvetica, Arial, sans-serif; font-size:14px; color:#000000; line-height:21px; -webkit-text-size-adjust:none; padding:10px 0px 10px 0px;"><b>Vivino {% if lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id2].deals_vc_ratings_average %}{{ (lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id2].deals_vc_ratings_average)| round(1) | replace('.',',') }}{% endif %}</b><span style="color:#999897;">, {{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id2].deals_vc_ratings_count }} recensioni</span></td>
+	            </tr>
+	            <tr>
+	          <td align="center" style="font-family:  Helvetica, Arial, sans-serif; font-size: 15px; line-height:24px; color:#ffffff; padding:20px 0px 45px 0px; -webkit-text-size-adjust:none;"><table bgcolor="#4db057" border="0" cellpadding="0" cellspacing="0" class="automargin cta" style="border-collapse: separate !important; border-radius:7px; background:#4db057;">
+	            <tr>
+	              <td align="center" valign="middle" style="font-family:  Helvetica, Arial, sans-serif; font-size: 18px; color:#ffffff; padding: 10px 50px; vertical-align:middle"><a href="{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id2].deals_near_perfect_link }}&prefill_token={{ contact.prefill_token }}&change_ship_to_country_code={{ contact.country_code }}" target="_blank" style="font-family: Helvetica, Arial, sans-serif; font-weight: bold;letter-spacing: normal;line-height: 100%;text-align: center; display:block;text-decoration: none;color: #ffffff;letter-spacing:1px"><strong>Mostra offerta</strong></a></td>
+	            </tr>
+	          </table></td>
+	        </tr>
+	      </table></td>
+	
+	  </tr>
+	</table></td>
+	</tr>
+	</table>
+{% else %}
+
+	<table style="max-width:700px; margin:0px auto;" class="w85pct" width="700" border="0" cellspacing="0" cellpadding="0">
+		
+	<tr>
+		<td align="center" class="center" style="font-family: Helvetica, Arial, sans-serif; font-size:19px; color:#000000; line-height:25px; -webkit-text-size-adjust:none; padding:30px 0px 15px 0px; text-transform:uppercase; letter-spacing:2px;">
+		<strong>Altre due grandi offerte per te su Vivino oggi </strong>
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="center" style="padding:25px 0px 0px;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+		  <tr>
+		    <td valign="top"><table class="w100pct" width="340" border="0" align="left" cellpadding="0" cellspacing="0">
+		      <tr>
+		        <td width="35" align="center" style="padding:0px 0px 0px 0px"><a href="{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id3].deals_near_perfect_link }}&prefill_token={{ contact.prefill_token }}&change_ship_to_country_code={{ contact.country_code }}" target="_blank"><img src="{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id3].deals_vc_bottle_image }}" alt="{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id3].deals_vc_winery_name }}" height="200" style="display:block; border:none; margin:0px auto;" /></a>
+		        </td>
+		        </tr>
+	        <tr>
+	          <td align="center" style="font-family:  Helvetica, Arial, sans-serif; font-size:16px; color:#666666; text-decoration:none; padding:15px 20px 10px 20px; -webkit-text-size-adjust:none;"><strong><a style="color:#666666; text-decoration:none;" href="{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id3].deals_near_perfect_link }}&prefill_token={{ contact.prefill_token }}&change_ship_to_country_code={{ contact.country_code }}" target="_blank">{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id3].deals_vc_winery_name }}</a></strong><br />
+	            <span style="font-size: 22px; line-height:30px; color:#000000;"><a style="color:#000000; text-decoration:none;" href="{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id3].deals_near_perfect_link }}&prefill_token={{ contact.prefill_token }}&change_ship_to_country_code={{ contact.country_code }}" target="_blank">{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id3].deals_vc_wine_name }}</a></span></td>
+	
+	        </tr>
+	      <tr>
+	        <td align="center"><table border="0" cellspacing="0" cellpadding="0">
+	          <tr>
+	            <td><img src="https://vivino.s3.amazonaws.com/emails/simon/stars/star_{% if lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id3].deals_vc_ratings_average %}{{ (lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id3].deals_vc_ratings_average)|round(1) }}{% endif %}.png" alt="" width="100" height="21" style="display:block; border:none;" /></td>
+	          </tr>
+	        </table></td>
+	
+	      </tr> 						
+	      <tr>
+	        <td align="center" class="center" style="font-family: Helvetica, Arial, sans-serif; font-size:14px; color:#000000; line-height:21px; -webkit-text-size-adjust:none; padding:10px 0px 10px 0px;"><b>Vivino {% if lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id3].deals_vc_ratings_average %}{{ (lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id3].deals_vc_ratings_average)| round(1) | replace('.',',') }}{% endif %}</b><span style="color:#999897;">, {{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id3].deals_vc_ratings_count }} recensioni</span></td>
+	      </tr>
+	      
+		  <tr>
+	        <td align="center" style="font-family:  Helvetica, Arial, sans-serif; font-size: 15px; line-height:24px; color:#ffffff; padding:20px 0px 45px 0px; -webkit-text-size-adjust:none;">
+		        <table bgcolor="#4db057" border="0" cellpadding="0" cellspacing="0" class="automargin cta" style="border-collapse: separate !important; border-radius:7px; background:#4db057;">
+		          <tr>
+		            <td align="center" valign="middle" style="font-family:  Helvetica, Arial, sans-serif; font-size: 18px; color:#ffffff; padding: 10px 50px; vertical-align:middle">
+			        <a href="{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id3].deals_near_perfect_link }}&prefill_token={{ contact.prefill_token }}&change_ship_to_country_code={{ contact.country_code }}" target="_blank" style="font-family: Helvetica, Arial, sans-serif; font-weight: bold;letter-spacing: normal;line-height: 100%;text-align: center; display:block;text-decoration: none;color: #ffffff;letter-spacing:1px"><strong>Mostra offerta</strong></a>
+			        </td>
+		          </tr>
+	        	</table>
+	        </td>
+	      </tr>
+	      
+	    </table>
+	    <!--[if (gte mso 9)|(IE)]> </td>
+		<td valign='top'> <![endif]-->
+	      <table class="w100pct" width="340" border="0" align="right" cellpadding="0" cellspacing="0">
+	        <tr>
+	          <td width="35" align="center" style="padding:0px 0px 0px 0px"><a href="{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id2].deals_near_perfect_link }}&prefill_token={{ contact.prefill_token }}&change_ship_to_country_code={{ contact.country_code }}" target="_blank"><img src="{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id2].deals_vc_bottle_image }}" alt="{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id2].deals_vc_winery_name }}" height="200"  style="display:block; border:none; margin:0px auto;" /></a></td>
+	        </tr>
+	        <tr>
+	          <td align="center" style="font-family:  Helvetica, Arial, sans-serif; font-size:16px; color:#666666; text-decoration:none; padding:15px 20px 10px 20px; -webkit-text-size-adjust:none;"><strong><a style="text-decoration: none; color:#666666" href="{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id2].deals_near_perfect_link }}&prefill_token={{ contact.prefill_token }}&change_ship_to_country_code={{ contact.country_code }}" target="_blank">{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id2].deals_vc_winery_name }}</a></strong><br />
+	            <span style="font-size: 22px; line-height:30px; color:#000000;"><a style="text-decoration: none; color:#000000" href="{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id2].deals_near_perfect_link }}&prefill_token={{ contact.prefill_token }}&change_ship_to_country_code={{ contact.country_code }}" target="_blank">{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id2].deals_vc_wine_name }}</a></span></td>
+	        </tr>
+	        <tr>
+	          <td align="center"><table border="0" cellspacing="0" cellpadding="0">
+	          <tr>
+	            <td><img src="https://vivino.s3.amazonaws.com/emails/simon/stars/star_{% if lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id2].deals_vc_ratings_average %}
+	{{ (lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id2].deals_vc_ratings_average)|round(1) }}{% endif %}.png" alt="" width="100" height="21" style="display:block; border:none;" /></td>
+	          </tr>
+	        </table></td>
+	        </tr> 						
+	        <tr>
+	              <td align="center" class="center" style="font-family: Helvetica, Arial, sans-serif; font-size:14px; color:#000000; line-height:21px; -webkit-text-size-adjust:none; padding:10px 0px 10px 0px;"><b>Vivino {% if lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id2].deals_vc_ratings_average %}{{ (lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id2].deals_vc_ratings_average)| round(1) | replace('.',',') }}{% endif %}</b><span style="color:#999897;">, {{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id2].deals_vc_ratings_count }} recensioni</span></td>
+	            </tr>
+	            <tr>
+	          <td align="center" style="font-family:  Helvetica, Arial, sans-serif; font-size: 15px; line-height:24px; color:#ffffff; padding:20px 0px 45px 0px; -webkit-text-size-adjust:none;"><table bgcolor="#4db057" border="0" cellpadding="0" cellspacing="0" class="automargin cta" style="border-collapse: separate !important; border-radius:7px; background:#4db057;">
+	            <tr>
+	              <td align="center" valign="middle" style="font-family:  Helvetica, Arial, sans-serif; font-size: 18px; color:#ffffff; padding: 10px 50px; vertical-align:middle"><a href="{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id2].deals_near_perfect_link }}&prefill_token={{ contact.prefill_token }}&change_ship_to_country_code={{ contact.country_code }}" target="_blank" style="font-family: Helvetica, Arial, sans-serif; font-weight: bold;letter-spacing: normal;line-height: 100%;text-align: center; display:block;text-decoration: none;color: #ffffff;letter-spacing:1px"><strong>Mostra offerta</strong></a></td>
+	            </tr>
+	          </table></td>
+	        </tr>
+	      </table></td>
+	
+	  </tr>
+	</table></td>
+	</tr>
+	</table>
+	
+{% endif %}
