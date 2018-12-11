@@ -1,0 +1,332 @@
+{% set wod = '10809954' %}
+{% if not lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id].deals_vc_product_id %}
+{% elif not lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id2].deals_vc_product_id %}
+{% elif not lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id3].deals_vc_product_id %}
+<!--display nothing if there is no product-->
+
+{% elif lookups.recommended_vintage[contact.email_address].product_id2 == wod %}
+	
+	<table style="max-width:640px; margin:0px auto;" class="w85pct" width="640" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td align="center" class="center" style="font-family: Helvetica, Arial, sans-serif; font-size:23px; color:#ffffff; line-height:25px; -webkit-text-size-adjust:none;  padding:40px 0px 15px 0px;"><strong>Autres ventes en cours</strong></td>
+		</tr>
+		<tr>
+			<td align="center" style="padding:20px 0px 0px;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td><table class="w100pct" width="320" border="0" align="left" cellpadding="0" cellspacing="0">
+				<tr>
+					<td height="335" align="center" background="http://vivino.s3.amazonaws.com/emails/simon/wine-deals/black/wine_bg.jpg" style="padding:0px 0px 0px 0px">
+	
+					<!--[if gte mso 9]>
+					<v:image xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style=" border: 0;display: inline-block; width: 320px; height: 355px;" src="http://vivino.s3.amazonaws.com/emails/simon/wine-deals/black/wine_bg.jpg" />
+					<v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style=" border: 0;display: inline-block;position: absolute; width: 320px; height: 355px;">
+					<v:fill opacity="0%" color="#030314"  />
+					<v:textbox inset="0,0,0,0">
+					<![endif]-->
+	
+					<table width="100%" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td height="335" align="center"><a href="{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id].deals_near_perfect_link }}&prefill_token={{ contact.prefill_token }}&change_ship_to_country_code={{ contact.country_code }}" target="_blank"><img src="{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id].deals_vc_bottle_image }}"  height="300" style="display:block; border:none; margin:0px auto;" /></a>
+							</td>
+						</tr>
+					</table>
+	
+					<!--[if gte mso 9]>
+					</v:textbox>
+					</v:fill>
+					</v:rect>
+					</v:image>
+					<![endif]-->
+					
+					</td>
+				</tr>
+				<tr>
+					<td align="center" style="font-family:	Helvetica, Arial, sans-serif; font-size: 18px; line-height:25px; color:#ffffff; padding:15px 20px 10px 20px; -webkit-text-size-adjust:none;"><span style="font-size:15px; text-transform:uppercase">{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id].deals_vc_winery_name }}</span><br />
+				<strong>{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id].deals_vc_wine_name }}</strong></td>
+				</tr>
+				<tr>
+					<td align="center" style="font-family:	 Helvetica, Arial, sans-serif; font-size: 15px; line-height:32px; color:#ffffff; padding:10px 20px 15px 20px; -webkit-text-size-adjust:none;">{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id].deals_vc_offer_title }}</td>
+				</tr>
+				<tr>
+					<td align="center" style="font-family:	Helvetica, Arial, sans-serif; font-size: 15px; line-height:24px; color:#ffffff; padding:0px 0px 45px 0px; -webkit-text-size-adjust:none;">
+						<table bgcolor="#719d60" border="0" cellpadding="0" cellspacing="0" class="automargin cta" style="border-collapse: separate !important; border-radius:7px; background:#719d60 url(http://vivino.s3.amazonaws.com/emails/simon/wine-deals/black/gradient.png);">
+							<tr>
+								<td height="50" align="center" valign="middle" style="font-family:  Helvetica, Arial, sans-serif; font-size: 18px; color:#ffffff; padding: 0px 30px; vertical-align:middle"><a href="{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id].deals_near_perfect_link }}&prefill_token={{ contact.prefill_token }}&change_ship_to_country_code={{ contact.country_code }}" target="_blank" style="font-family: Helvetica, Arial, sans-serif; font-weight: bold;letter-spacing: normal;line-height: 100%;text-align: center; display:block;text-decoration: none;color: #ffffff;letter-spacing:1px">Voir l'offre</a></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			
+				<!--[if (gte mso 9)|(IE)]>
+				</td>
+				<td valign='top'>
+				<![endif]-->
+				
+			<table class="w100pct" width="320" border="0" align="left" cellpadding="0" cellspacing="0">
+				<tr>
+					<td height="335" align="center" background="http://vivino.s3.amazonaws.com/emails/simon/wine-deals/black/wine_bg.jpg" style="padding:0px 0px 0px 0px">
+						
+						<!--[if gte mso 9]>  <v:image xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style=" border: 0;display: inline-block; width: 320px; height: 355px;" src="http://vivino.s3.amazonaws.com/emails/simon/wine-deals/black/wine_bg.jpg" />
+						<v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style=" border: 0;display: inline-block;position: absolute; width: 320px; height: 355px;">
+						<v:fill opacity="0%" color="#030314"	/>
+						<v:textbox inset="0,0,0,0">
+						<![endif]-->
+
+						<table width="100%" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td height="335" align="center">
+									<a href="{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id3].deals_near_perfect_link }}&prefill_token={{ contact.prefill_token }}&change_ship_to_country_code={{ contact.country_code }}" target="_blank"><img src="{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id3].deals_vc_bottle_image }}" height="300" style="display:block; border:none; margin:0px auto;" /></a></td>
+							</tr>
+						</table>
+						
+						<!--[if gte mso 9]>
+						</v:textbox>
+						</v:fill>
+						</v:rect>
+						</v:image>
+						<![endif]-->
+					</td>
+				</tr>
+				<tr>
+					<td align="center" style="font-family:  Helvetica, Arial, sans-serif; font-size: 18px; line-height:25px; color:#ffffff; padding:15px 20px 10px 20px; -webkit-text-size-adjust:none;"><span style="font-size:15px; text-transform:uppercase">{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id3].deals_vc_winery_name }}</span> <br />
+						<strong>{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id3].deals_vc_wine_name }}</strong></td>
+				</tr>
+				<tr>
+					<td align="center" style="font-family:  Helvetica, Arial, sans-serif; font-size: 15px; line-height:32px; color:#ffffff; padding:10px 20px 15px 20px; -webkit-text-size-adjust:none;">{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id3].deals_vc_offer_title }}</td>
+				</tr>
+				<tr>
+					<td align="center" style="font-family:  Helvetica, Arial, sans-serif; font-size: 15px; line-height:24px; color:#ffffff; padding:0px 0px 45px 0px; -webkit-text-size-adjust:none;">
+						<table bgcolor="#719d60" border="0" cellpadding="0" cellspacing="0" class="automargin cta" style="border-collapse: separate !important; border-radius:7px; background:#719d60 url(http://vivino.s3.amazonaws.com/emails/simon/wine-deals/black/gradient.png);">
+							<tr>
+								<td height="50" align="center" valign="middle" style="font-family:	 Helvetica, Arial, sans-serif; font-size: 18px; color:#ffffff; padding: 0px 30px; vertical-align:middle"><a href="{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id3].deals_near_perfect_link }}&prefill_token={{ contact.prefill_token }}&change_ship_to_country_code={{ contact.country_code }}" target="_blank" style="font-family: Helvetica, Arial, sans-serif; font-weight: bold;letter-spacing: normal;line-height: 100%;text-align: center; display:block;text-decoration: none;color: #ffffff;letter-spacing:1px">Voir l'offre</a></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	</table>
+	</td>
+	</tr>
+	</table>
+		
+{% elif lookups.recommended_vintage[contact.email_address].product_id3 == wod %}
+	
+		<table style="max-width:640px; margin:0px auto;" class="w85pct" width="640" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td align="center" class="center" style="font-family: Helvetica, Arial, sans-serif; font-size:23px; color:#ffffff; line-height:25px; -webkit-text-size-adjust:none;  padding:40px 0px 15px 0px;"><strong>Autres ventes en cours</strong></td>
+		</tr>
+		<tr>
+			<td align="center" style="padding:20px 0px 0px;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td><table class="w100pct" width="320" border="0" align="left" cellpadding="0" cellspacing="0">
+				<tr>
+					<td height="335" align="center" background="http://vivino.s3.amazonaws.com/emails/simon/wine-deals/black/wine_bg.jpg" style="padding:0px 0px 0px 0px">
+	
+					<!--[if gte mso 9]>
+					<v:image xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style=" border: 0;display: inline-block; width: 320px; height: 355px;" src="http://vivino.s3.amazonaws.com/emails/simon/wine-deals/black/wine_bg.jpg" />
+					<v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style=" border: 0;display: inline-block;position: absolute; width: 320px; height: 355px;">
+					<v:fill opacity="0%" color="#030314"  />
+					<v:textbox inset="0,0,0,0">
+					<![endif]-->
+	
+					<table width="100%" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td height="335" align="center"><a href="{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id].deals_near_perfect_link }}&prefill_token={{ contact.prefill_token }}&change_ship_to_country_code={{ contact.country_code }}" target="_blank"><img src="{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id].deals_vc_bottle_image }}"  height="300" style="display:block; border:none; margin:0px auto;" /></a>
+							</td>
+						</tr>
+					</table>
+	
+					<!--[if gte mso 9]>
+					</v:textbox>
+					</v:fill>
+					</v:rect>
+					</v:image>
+					<![endif]-->
+					
+					</td>
+				</tr>
+				<tr>
+					<td align="center" style="font-family:	Helvetica, Arial, sans-serif; font-size: 18px; line-height:25px; color:#ffffff; padding:15px 20px 10px 20px; -webkit-text-size-adjust:none;"><span style="font-size:15px; text-transform:uppercase">{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id].deals_vc_winery_name }}</span><br />
+				<strong>{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id].deals_vc_wine_name }}</strong></td>
+				</tr>
+				<tr>
+					<td align="center" style="font-family:	 Helvetica, Arial, sans-serif; font-size: 15px; line-height:32px; color:#ffffff; padding:10px 20px 15px 20px; -webkit-text-size-adjust:none;">{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id].deals_vc_offer_title }}</td>
+				</tr>
+				<tr>
+					<td align="center" style="font-family:	Helvetica, Arial, sans-serif; font-size: 15px; line-height:24px; color:#ffffff; padding:0px 0px 45px 0px; -webkit-text-size-adjust:none;">
+						<table bgcolor="#719d60" border="0" cellpadding="0" cellspacing="0" class="automargin cta" style="border-collapse: separate !important; border-radius:7px; background:#719d60 url(http://vivino.s3.amazonaws.com/emails/simon/wine-deals/black/gradient.png);">
+							<tr>
+								<td height="50" align="center" valign="middle" style="font-family:  Helvetica, Arial, sans-serif; font-size: 18px; color:#ffffff; padding: 0px 30px; vertical-align:middle"><a href="{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id].deals_near_perfect_link }}&prefill_token={{ contact.prefill_token }}&change_ship_to_country_code={{ contact.country_code }}" target="_blank" style="font-family: Helvetica, Arial, sans-serif; font-weight: bold;letter-spacing: normal;line-height: 100%;text-align: center; display:block;text-decoration: none;color: #ffffff;letter-spacing:1px">Voir l'offre</a></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			
+				<!--[if (gte mso 9)|(IE)]>
+				</td>
+				<td valign='top'>
+				<![endif]-->
+				
+			<table class="w100pct" width="320" border="0" align="left" cellpadding="0" cellspacing="0">
+				<tr>
+					<td height="335" align="center" background="http://vivino.s3.amazonaws.com/emails/simon/wine-deals/black/wine_bg.jpg" style="padding:0px 0px 0px 0px">
+						
+						<!--[if gte mso 9]>  <v:image xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style=" border: 0;display: inline-block; width: 320px; height: 355px;" src="http://vivino.s3.amazonaws.com/emails/simon/wine-deals/black/wine_bg.jpg" />
+						<v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style=" border: 0;display: inline-block;position: absolute; width: 320px; height: 355px;">
+						<v:fill opacity="0%" color="#030314"	/>
+						<v:textbox inset="0,0,0,0">
+						<![endif]-->
+
+						<table width="100%" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td height="335" align="center">
+									<a href="{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id2].deals_near_perfect_link }}&prefill_token={{ contact.prefill_token }}&change_ship_to_country_code={{ contact.country_code }}" target="_blank"><img src="{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id2].deals_vc_bottle_image }}" height="300" style="display:block; border:none; margin:0px auto;" /></a></td>
+							</tr>
+						</table>
+						
+						<!--[if gte mso 9]>
+						</v:textbox>
+						</v:fill>
+						</v:rect>
+						</v:image>
+						<![endif]-->
+					</td>
+				</tr>
+				<tr>
+					<td align="center" style="font-family:  Helvetica, Arial, sans-serif; font-size: 18px; line-height:25px; color:#ffffff; padding:15px 20px 10px 20px; -webkit-text-size-adjust:none;"><span style="font-size:15px; text-transform:uppercase">{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id2].deals_vc_winery_name }}</span> <br />
+						<strong>{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id2].deals_vc_wine_name }}</strong></td>
+				</tr>
+				<tr>
+					<td align="center" style="font-family:  Helvetica, Arial, sans-serif; font-size: 15px; line-height:32px; color:#ffffff; padding:10px 20px 15px 20px; -webkit-text-size-adjust:none;">{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id2].deals_vc_offer_title }}</td>
+				</tr>
+				<tr>
+					<td align="center" style="font-family:  Helvetica, Arial, sans-serif; font-size: 15px; line-height:24px; color:#ffffff; padding:0px 0px 45px 0px; -webkit-text-size-adjust:none;">
+						<table bgcolor="#719d60" border="0" cellpadding="0" cellspacing="0" class="automargin cta" style="border-collapse: separate !important; border-radius:7px; background:#719d60 url(http://vivino.s3.amazonaws.com/emails/simon/wine-deals/black/gradient.png);">
+							<tr>
+								<td height="50" align="center" valign="middle" style="font-family:	 Helvetica, Arial, sans-serif; font-size: 18px; color:#ffffff; padding: 0px 30px; vertical-align:middle"><a href="{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id2].deals_near_perfect_link }}&prefill_token={{ contact.prefill_token }}&change_ship_to_country_code={{ contact.country_code }}" target="_blank" style="font-family: Helvetica, Arial, sans-serif; font-weight: bold;letter-spacing: normal;line-height: 100%;text-align: center; display:block;text-decoration: none;color: #ffffff;letter-spacing:1px">Voir l'offre</a></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	</table>
+	</td>
+	</tr>
+	</table>
+	
+		
+{% else %}
+	
+	<table style="max-width:640px; margin:0px auto;" class="w85pct" width="640" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td align="center" class="center" style="font-family: Helvetica, Arial, sans-serif; font-size:23px; color:#ffffff; line-height:25px; -webkit-text-size-adjust:none;  padding:40px 0px 15px 0px;"><strong>Autres ventes en cours</strong></td>
+		</tr>
+		<tr>
+			<td align="center" style="padding:20px 0px 0px;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td><table class="w100pct" width="320" border="0" align="left" cellpadding="0" cellspacing="0">
+				<tr>
+					<td height="335" align="center" background="http://vivino.s3.amazonaws.com/emails/simon/wine-deals/black/wine_bg.jpg" style="padding:0px 0px 0px 0px">
+	
+					<!--[if gte mso 9]>
+					<v:image xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style=" border: 0;display: inline-block; width: 320px; height: 355px;" src="http://vivino.s3.amazonaws.com/emails/simon/wine-deals/black/wine_bg.jpg" />
+					<v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style=" border: 0;display: inline-block;position: absolute; width: 320px; height: 355px;">
+					<v:fill opacity="0%" color="#030314"  />
+					<v:textbox inset="0,0,0,0">
+					<![endif]-->
+	
+					<table width="100%" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td height="335" align="center"><a href="{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id3].deals_near_perfect_link }}&prefill_token={{ contact.prefill_token }}&change_ship_to_country_code={{ contact.country_code }}" target="_blank"><img src="{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id3].deals_vc_bottle_image }}"  height="300" style="display:block; border:none; margin:0px auto;" /></a>
+							</td>
+						</tr>
+					</table>
+	
+					<!--[if gte mso 9]>
+					</v:textbox>
+					</v:fill>
+					</v:rect>
+					</v:image>
+					<![endif]-->
+					
+					</td>
+				</tr>
+				<tr>
+					<td align="center" style="font-family:	Helvetica, Arial, sans-serif; font-size: 18px; line-height:25px; color:#ffffff; padding:15px 20px 10px 20px; -webkit-text-size-adjust:none;"><span style="font-size:15px; text-transform:uppercase">{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id3].deals_vc_winery_name }}</span><br />
+				<strong>{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id3].deals_vc_wine_name }}</strong></td>
+				</tr>
+				<tr>
+					<td align="center" style="font-family:	 Helvetica, Arial, sans-serif; font-size: 15px; line-height:32px; color:#ffffff; padding:10px 20px 15px 20px; -webkit-text-size-adjust:none;">{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id3].deals_vc_offer_title }}</td>
+				</tr>
+				<tr>
+					<td align="center" style="font-family:	Helvetica, Arial, sans-serif; font-size: 15px; line-height:24px; color:#ffffff; padding:0px 0px 45px 0px; -webkit-text-size-adjust:none;">
+						<table bgcolor="#719d60" border="0" cellpadding="0" cellspacing="0" class="automargin cta" style="border-collapse: separate !important; border-radius:7px; background:#719d60 url(http://vivino.s3.amazonaws.com/emails/simon/wine-deals/black/gradient.png);">
+							<tr>
+								<td height="50" align="center" valign="middle" style="font-family:  Helvetica, Arial, sans-serif; font-size: 18px; color:#ffffff; padding: 0px 30px; vertical-align:middle"><a href="{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id3].deals_near_perfect_link }}&prefill_token={{ contact.prefill_token }}&change_ship_to_country_code={{ contact.country_code }}" target="_blank" style="font-family: Helvetica, Arial, sans-serif; font-weight: bold;letter-spacing: normal;line-height: 100%;text-align: center; display:block;text-decoration: none;color: #ffffff;letter-spacing:1px">Voir l'offre</a></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			
+				<!--[if (gte mso 9)|(IE)]>
+				</td>
+				<td valign='top'>
+				<![endif]-->
+				
+			<table class="w100pct" width="320" border="0" align="left" cellpadding="0" cellspacing="0">
+				<tr>
+					<td height="335" align="center" background="http://vivino.s3.amazonaws.com/emails/simon/wine-deals/black/wine_bg.jpg" style="padding:0px 0px 0px 0px">
+						
+						<!--[if gte mso 9]>  <v:image xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style=" border: 0;display: inline-block; width: 320px; height: 355px;" src="http://vivino.s3.amazonaws.com/emails/simon/wine-deals/black/wine_bg.jpg" />
+						<v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style=" border: 0;display: inline-block;position: absolute; width: 320px; height: 355px;">
+						<v:fill opacity="0%" color="#030314"	/>
+						<v:textbox inset="0,0,0,0">
+						<![endif]-->
+
+						<table width="100%" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td height="335" align="center">
+									<a href="{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id2].deals_near_perfect_link }}&prefill_token={{ contact.prefill_token }}&change_ship_to_country_code={{ contact.country_code }}" target="_blank"><img src="{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id2].deals_vc_bottle_image }}" height="300" style="display:block; border:none; margin:0px auto;" /></a></td>
+							</tr>
+						</table>
+						
+						<!--[if gte mso 9]>
+						</v:textbox>
+						</v:fill>
+						</v:rect>
+						</v:image>
+						<![endif]-->
+					</td>
+				</tr>
+				<tr>
+					<td align="center" style="font-family:  Helvetica, Arial, sans-serif; font-size: 18px; line-height:25px; color:#ffffff; padding:15px 20px 10px 20px; -webkit-text-size-adjust:none;"><span style="font-size:15px; text-transform:uppercase">{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id2].deals_vc_winery_name }}</span> <br />
+						<strong>{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id2].deals_vc_wine_name }}</strong></td>
+				</tr>
+				<tr>
+					<td align="center" style="font-family:  Helvetica, Arial, sans-serif; font-size: 15px; line-height:32px; color:#ffffff; padding:10px 20px 15px 20px; -webkit-text-size-adjust:none;">{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id2].deals_vc_offer_title }}</td>
+				</tr>
+				<tr>
+					<td align="center" style="font-family:  Helvetica, Arial, sans-serif; font-size: 15px; line-height:24px; color:#ffffff; padding:0px 0px 45px 0px; -webkit-text-size-adjust:none;">
+						<table bgcolor="#719d60" border="0" cellpadding="0" cellspacing="0" class="automargin cta" style="border-collapse: separate !important; border-radius:7px; background:#719d60 url(http://vivino.s3.amazonaws.com/emails/simon/wine-deals/black/gradient.png);">
+							<tr>
+								<td height="50" align="center" valign="middle" style="font-family:	 Helvetica, Arial, sans-serif; font-size: 18px; color:#ffffff; padding: 0px 30px; vertical-align:middle"><a href="{{ lookups.deals_vc_product_catalog[lookups.recommended_vintage[contact.email_address].product_id2].deals_near_perfect_link }}&prefill_token={{ contact.prefill_token }}&change_ship_to_country_code={{ contact.country_code }}" target="_blank" style="font-family: Helvetica, Arial, sans-serif; font-weight: bold;letter-spacing: normal;line-height: 100%;text-align: center; display:block;text-decoration: none;color: #ffffff;letter-spacing:1px">Voir l'offre</a></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	</table>
+	</td>
+	</tr>
+	</table>
+	
+{%endif%}
